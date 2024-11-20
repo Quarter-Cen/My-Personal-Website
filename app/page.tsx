@@ -1,6 +1,8 @@
 "use client"
-
+import Navbar from "./components/Navbar"; 
 import { motion } from "framer-motion";
+import Hero from "./components/Hero";
+import SkillTech from "./components/SkillTech";
 
 
 export default function HomePage() {
@@ -10,26 +12,30 @@ export default function HomePage() {
   };
 
   return (
-    <div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} // แสดง animation เมื่อ 20% ของ element เข้า viewport
-        variants={fadeInUp}
-        transition={{ duration: 0.6 }}
-      >
-        <h1>Welcome to My Resume</h1>
-      </motion.div>
+    <div className="bg-[#e0e0de]">
+      <Navbar></Navbar>
+      <div >
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} // แสดง animation เมื่อ 20% ของ element เข้า viewport
+          variants={fadeInUp}
+          transition={{ duration: 0.6 }}
+        >
+          <Hero></Hero>
+        </motion.div>
+        <div className="divider"></div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <p>Here is some text about me.</p>
-      </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <SkillTech></SkillTech>
+        </motion.div>
+      </div>
     </div>
   );
 }

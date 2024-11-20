@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Trirong } from 'next/font/google';
 import { ReactNode } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+
+const trirong = Trirong({ 
+  subsets: ['latin'],
+  weight: ['200', '400', '700'],
+ });
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -11,7 +15,7 @@ interface RootLayoutProps {
 
 export const metadata: Metadata = {
   title: "Kanok Saengjan",
-  description: "My Resume",
+  description: "My Portfolio",
   icons: {
     icon: "/favicon.ico", 
   },
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={trirong.className}>{children}</body>
     </html>
   );
 }
