@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import './globals.css';
 import { Trirong } from 'next/font/google';
 import { ReactNode } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 const trirong = Trirong({ 
@@ -24,7 +25,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={trirong.className}>{children}</body>
+      <body className={trirong.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

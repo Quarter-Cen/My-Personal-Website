@@ -27,7 +27,7 @@ export default function Navbar() {
         <>
             <div className="navbar bg-[#074940] sticky top-0 z-10 text-white">
                 <div className="navbar-start">
-                    <a className="m-3 text-2xl">My Portfolio</a>
+                    <a className="m-3 text-2xl tracking-[10px]">Kanok</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-lg">
