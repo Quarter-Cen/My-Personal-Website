@@ -23,3 +23,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  @apply bg-base-100 text-neutral;
+}

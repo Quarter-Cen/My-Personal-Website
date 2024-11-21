@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="mytheme">
       <body className={trirong.className}>
         {children}
         <SpeedInsights />

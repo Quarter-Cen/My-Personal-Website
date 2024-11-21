@@ -17,7 +17,7 @@ export default function Navbar() {
 
         window.addEventListener('scroll', handleScroll);
 
-        // ลบ event listener เมื่อ component ถูกลบ
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -25,17 +25,26 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="navbar bg-[#074940] sticky top-0 z-10 text-white">
+        <div className='sticky top-0 z-10'>
+            <div className="navbar bg-primary  text-white">
                 <div className="navbar-start">
-                    <a className="m-3 text-2xl tracking-[10px]">Kanok</a>
+                    <a className="m-3 text-2xl tracking-[10px] text-shadow">Kanok</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-lg">
-                        <li><a>Home</a></li>
-                        <li><a>Portfolio</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Contact</a></li>
-                    </ul>
+                    <div className="flex justify-center space-x-4 ">
+                        <a href="#portfolio" className="btn btn-primary text-base text-white text-shadow-sm">
+                            Home
+                        </a>
+                        <a href="#portfolio" className="btn btn-primary text-base text-white text-shadow-sm">
+                            Portfolio
+                        </a>
+                        <a href="#portfolio" className="btn btn-primary text-base text-white text-shadow-sm">
+                            About
+                        </a>
+                        <a href="#portfolio" className="btn btn-primary text-base text-white text-shadow-sm">
+                            Contact
+                        </a>
+                    </div>
                 </div>
                 <div className="navbar-end">
                     <progress className="progress progress-accent w-40 mr-4 hidden lg:flex" value={scrollPercentage} max="100"></progress>
@@ -66,6 +75,10 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
+            <div className="bg-[#f7d662] -mt-1 h-1"></div>
+        </div>
+            
+
         </>
     );
 }
