@@ -27,3 +27,106 @@ html {
 body {
   @apply bg-base-100 text-neutral;
 }
+
+.container {
+  height: 100vh; /* เต็มจอ */
+  overflow: hidden; /* ปิดการ scroll ทั่วไป */
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.section:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+.pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+/* Hover effect */
+.pagination-item:hover {
+  transform: scale(1.1); 
+  background-color: #f0f0f0; 
+}
+
+/* Adding the content on hover using ::before (for left positioning) */
+.pagination-item:hover::before {
+  content: attr(data-name);
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -100px;
+  width: 100px;
+  opacity: 0;
+  text-align: right;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #101010;
+  align-items:center ;
+  transform: translateX(-10px) scale(.9);
+  
+}
+
+.pagination-item:hover::before {
+  opacity: 1; /* Show the content */
+  transform: translateY(-50%) translateX(-10px); 
+}
+
+.pagination-item:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 4px solid rgba(16, 16, 16, .18);
+  transform: rotate(45deg) scale(.9);
+}
+
+.diamond {
+  width: 12px;
+  height: 12px;
+  background-color: #e0e0e0;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.pagination-item.active .diamond {
+  background-color: #f44336; /* Red for active item */
+  transform: scale(1.2);
+}
+
+.pagination-item.active:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f44336;
+  border: 4px solid rgba(16, 16, 16, .18);
+  transform: rotate(45deg);
+}

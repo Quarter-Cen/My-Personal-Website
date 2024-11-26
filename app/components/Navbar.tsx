@@ -75,6 +75,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
+            <div className="bg-[#412910] -mt-1 h-2"></div>
             <div className="bg-[#f7d662] -mt-1 h-1"></div>
         </div>
             
