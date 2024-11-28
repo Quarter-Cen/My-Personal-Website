@@ -10,6 +10,10 @@ const Home: React.FC = () => {
   const isScrolling = useRef(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0); // เลื่อนไปที่ตำแหน่งบนสุดของหน้า
+  }, []);
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
@@ -38,7 +42,7 @@ const Home: React.FC = () => {
 
       setTimeout(() => {
         isScrolling.current = false;
-      }, 700); // Adjust the timeout based on transition duration
+      }, 950); // Adjust the timeout based on transition duration
     };
 
     document.addEventListener("wheel", handleWheel, { passive: false });
@@ -102,7 +106,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="fixed z-50">
-        <Navbar />
+        <Navbar currentIndex={currentIndex}/>
       </div>
       <div className="floating-box"></div>
       <div className="content" ref={containerRef}>

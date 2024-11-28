@@ -50,9 +50,6 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-.section:nth-child(even) {
-  background-color: #dde1e6;
-}
 
 .pagination {
   position: fixed;
@@ -180,4 +177,17 @@ body {
   width: 1px;  /* ความกว้างของเส้น */
   height: 10px;  /* ความสูงของเส้น */
   background-color: #010101;  /* สีของเส้น */
+}
+
+.fill-white path {
+  fill: white; /* สีขาว */
+}
+
+.fill-black path {
+  fill: black; /* สีดำ */
+}
+
+/* เพิ่ม transition เพื่อการเฟด */
+svg path {
+  transition: fill 0.5s ease-in-out; /* เปลี่ยนสีภายใน 0.5 วินาที */
 }
