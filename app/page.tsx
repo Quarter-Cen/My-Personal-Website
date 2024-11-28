@@ -102,7 +102,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="fixed z-50">
-        <Navbar />
+        <Navbar currentIndex={currentIndex}/>
       </div>
       <div className="floating-box"></div>
       <div className="content" ref={containerRef}>
