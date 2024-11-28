@@ -9,6 +9,12 @@ const Home: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isScrolling = useRef(false);
 
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // เลื่อนไปบนสุดเมื่อ URL เปลี่ยน
+  }, []);
+
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -38,7 +44,7 @@ const Home: React.FC = () => {
 
       setTimeout(() => {
         isScrolling.current = false;
-      }, 950); // Adjust the timeout based on transition duration
+      }, 1000); // Adjust the timeout based on transition duration
     };
 
     document.addEventListener("wheel", handleWheel, { passive: false });
