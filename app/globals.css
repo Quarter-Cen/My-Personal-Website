@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,16 +32,16 @@ html {
 
 body {
   @apply bg-base-100 text-neutral;
+  overflow: hidden;
 }
 
 .container {
-  min-height: 100vh; /* เต็มจอ */
-  max-height: 100vh;
-  overflow: hidden; /* ปิดการ scroll ทั่วไป */
+  min-height: 100vh;
 }
 
 .section {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +51,7 @@ body {
 }
 
 .section:nth-child(even) {
-  background-color: #e9ecef;
+  background-color: #dde1e6;
 }
 
 .pagination {
@@ -87,7 +93,7 @@ body {
   line-height: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  color: #101010;
+  color: #ececec;
   align-items:center ;
   transform: translateX(-10px) scale(.9);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -125,7 +131,7 @@ body {
 }
 
 .pagination-item.active .diamond {
-  background-color: #f44336; /* Red for active item */
+  background-color: #074940; /* Red for active item */
   transform: scale(1.2);
 }
 
@@ -137,7 +143,41 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #f44336;
+  background: #074940;
   border: 4px solid rgba(16, 16, 16, .18);
   transform: rotate(45deg);
+}
+
+.content {
+  min-height: 100vh; /* เต็มจอ */
+  max-height: none;  /* ลบ max-height */
+}
+
+.floating-box {
+  box-sizing: border-box; /* รวม padding และ border เข้ากับขนาดกรอบ */
+  padding: 0.5rem; /* Padding ด้านในกรอบ */
+  width: calc(100% - 1rem); /* ลดขนาดกรอบตาม padding */
+  height: calc(100vh - 1rem - 2px); /* ลดขนาดกรอบตาม padding */
+  border: 1px solid #27272a;
+  position: fixed; /* ลอยอยู่กลางหน้าจอ */
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.mil-active {
+  position: relative;  /* ทำให้ตำแหน่งของเส้นแนวตั้งสัมพันธ์กับลิงก์ */
+}
+
+.mil-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;  /* เส้นจะอยู่ใต้คำ */
+  left: 50%;  /* จัดเส้นให้อยู่ตรงกลาง */
+  width: 1px;  /* ความกว้างของเส้น */
+  height: 10px;  /* ความสูงของเส้น */
+  background-color: #010101;  /* สีของเส้น */
 }
