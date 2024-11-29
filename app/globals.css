@@ -7,6 +7,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+*,
+*:hover {
+    scrollbar-color: auto;
+}
+@layer utilities {
+
+/* ซ่อนลูกศรและเพิ่มสีให้ scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* ขนาดของ scrollbar */
+  height: 6px; /* สำหรับ scrollbar แนวนอน */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* สีพื้นหลังของ track (ส่วนที่ scrollbar วิ่งผ่าน) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #074940; /* สีของตัวเลื่อน (thumb) */
+  border-radius: 10px; /* ขอบมนให้ตัวเลื่อน */
+  border: 2px solid transparent; /* ขอบโปร่งใสเพื่อให้ตัวเลื่อนดูเรียบ */
+}
+
+/* เมื่อ hover ที่ scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* สีของตัวเลื่อนเมื่อ hover */
+}
+
+/* ซ่อนลูกศรของ scrollbar */
+::-webkit-scrollbar-button {
+  display: none; /* ซ่อนลูกศรทั้งสอง */
+}
+  
+  }
 
 :root {
   --background: #ffffff;
@@ -37,7 +70,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    overflow: auto; /* ใช้ scrollbar ปกติ */
+    overflow: auto;
   }
 }
 

@@ -130,7 +130,7 @@ const Home: React.FC = () => {
         <Navbar currentIndex={currentIndex} />
       </div>
       <div className="floating-box"></div>
-      <div className="content" ref={containerRef}>
+      <div className="content " ref={containerRef}>
         <section className="section">
           <motion.div
             initial="hidden"
