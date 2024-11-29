@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentIndex }) => {
         if (!isSmScreen) {
             setHamColor('black'); // ขนาดหน้าจอ sm ขึ้นไป สีจะเป็นดำ
         } else {
-        const isAboutSection = currentIndex === 1; // ตรวจสอบว่าอยู่ใน section "ABOUT" (index 1)
+        const isAboutSection = currentIndex === 1 || currentIndex === 2;
         const svgFillColor = isAboutSection ? 'fill-black' : 'fill-white'; // เลือกสีตามสถานะ
         const svgHamColor = isAboutSection ? 'black' : 'white'; // เลือกสีตามสถานะ
 

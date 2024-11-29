@@ -2,7 +2,7 @@ import { div } from "framer-motion/client"
 
 export default function SkillTech() {
     return (
-        <div className="min-h-screen bg-cover" style={{backgroundImage: "linear-gradient(rgba(224, 224, 222, 0.6), rgba(224, 224, 222, 0.6)), url('/minimal_bg.png')"}}>
+        <div className="bg-cover" style={{backgroundImage: "linear-gradient(rgba(224, 224, 222, 0.6), rgba(224, 224, 222, 0.6)), url('/minimal_bg.png')"}}>
 
                 <div>
                     <div className="max-w-5xl mx-auto p-6">

@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import Pagination from "./components/Pagination";
 import Navbar from "./components/Navbar";
+import HomeSection from "./components/HomeSection";
+import AboutSection from "./components/AboutSection";
+import SkillSection from "./components/SkillSection";
 
 const Home: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,7 +93,6 @@ const Home: React.FC = () => {
     hidden: {
       opacity: 0,
       scale: 0.8,
-      y: "-50vh",
     },
     visible: {
       opacity: 1,
@@ -117,7 +119,6 @@ const Home: React.FC = () => {
     exit: {
       opacity: 0,
       scale: 0.6,
-      y: "-50vh",
       transition: {
         duration: 0.5,
       },
@@ -135,65 +136,47 @@ const Home: React.FC = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: false, amount: 0.2  }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
             className="w-full text-zinc-900"
           >
-            <div className="grid grid-rows-3 grid-flow-col gap-4">
-              <div className="col-span-2 row-span-3 flex items-center justify-center w-3/4">
-                <div className="flex flex-col ml-16">
-                  <div >
-                    <p className="text-sm">
-                      WEB DEVELOPER <span className="text-[#074940]">AND</span> MUSICIAN 
-                    </p>
-                    <h1 className="tracking-wide leading-none text-7xl text-shadow-sm">
-                      KANOK <span className="block mt-0">{/* No margin-top */} SAENGJAN</span>
-                    </h1>
-                  </div>
-                  <p className="text-sm px-16 mt-2 ">
-                    From Thailand, Sisaket. I have experience in web design, also I am good at Aglie Framework. I love to talk with you about our unique.
-                  </p>
-                  <div className="flex justify-center space-x-4 mt-3 ">
-                    <a href="#portfolio" className="btn btn-primary shadow-sm text-white">
-                      View My Work
-                    </a>
-                    <a href="#contact" className="btn btn-outline">
-                      Contact Me
-                    </a>
-                  </div>
-              </div>
-            </div>
-              <div className="row-span-3 justify-self-end">
-                <img src="IMG_1480.jpg" alt="" className="min-h-screen w-full object-cover" />
-              </div>
-            </div>
-
+            <HomeSection/>
           </motion.div>
         </section>
         <section className="section">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: false, amount: 0.3  }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="bg-blue-500"
+            className="text-zinc-900"
           >
-            ABOUT
+            <AboutSection/>
           </motion.div>
         </section>
-        <section className="section">
-          <motion.div
+        <section className="section ">
+        <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="bg-green-500"
+            className="text-zinc-900 my-background"
           >
-            SKILLS
+            <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={fadeInUp}
+            transition={{ duration: 1 }}
+            className="text-zinc-900 "
+          >
+              <SkillSection />
+            </motion.div>
           </motion.div>
+          
         </section>
         <section className="section">
           <motion.div
