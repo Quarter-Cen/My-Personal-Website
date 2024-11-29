@@ -251,7 +251,3 @@ svg path {
   opacity: 0.5; 
 
 }
-.hover-fill-important {
-  @apply hover:fill-[#074940];
-  fill: #074940 !important;
-}
