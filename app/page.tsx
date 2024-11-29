@@ -160,10 +160,10 @@ const Home: React.FC = () => {
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="text-zinc-900 my-background"
+            className="text-zinc-900 my-background flex w-screen h-screen items-center justify-center"
           >
             <motion.div
             initial="hidden"
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
             viewport={{ once: false }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="text-zinc-900 "
+            className="text-zinc-900 w-[80vw] h-[70vh]"
           >
               <SkillSection />
             </motion.div>

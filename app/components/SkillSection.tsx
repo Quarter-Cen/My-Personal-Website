@@ -4,8 +4,8 @@ export default function SkillSection() {
       <div className="grid grid-rows-8 grid-cols-3 grid-flow-col gap-4 w-[80vw] h-[70vh] ">
         <div className="row-span-1 flex items-end">
           <div>
-            <p className="text-base">
-              MY GREAT <span className="text-[#074940]">WORK</span>
+            <p className="text-base font-extrabold">
+              MY GREAT <span className="text-[#074940] underline underline-offset-4">WORK</span>
             </p>
           </div>
         </div>
