@@ -8,14 +8,33 @@ const Home: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const isScrolling = useRef(false);
-
+  const [isMdScreen, setIsMdScreen] = useState(false); // ตรวจสอบขนาดหน้าจอ
 
   useEffect(() => {
     window.scrollTo(0, 0); // เลื่อนไปบนสุดเมื่อ URL เปลี่ยน
   }, []);
 
+  // ฟังก์ชันตรวจสอบขนาดหน้าจอ
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) { // ขนาดหน้าจอ md ขึ้นไป
+        setIsMdScreen(true);
+      } else {
+        setIsMdScreen(false);
+      }
+    };
+
+    handleResize(); // ตรวจสอบขนาดหน้าจอเริ่มต้น
+    window.addEventListener("resize", handleResize); // ฟังการเปลี่ยนแปลงขนาดหน้าจอ
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
+    if (!isMdScreen) return; // ถ้าหน้าจอ md ขึ้นไปไม่ให้ใช้การเลื่อนแบบ step
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -48,11 +67,11 @@ const Home: React.FC = () => {
     };
 
     document.addEventListener("wheel", handleWheel, { passive: false });
+
     return () => {
       document.removeEventListener("wheel", handleWheel);
     };
-
-  }, [currentIndex]);
+  }, [currentIndex, isMdScreen]);
 
   const handlePaginationClick = (index: number) => {
     const container = containerRef.current;
@@ -108,7 +127,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="fixed z-50">
-        <Navbar currentIndex={currentIndex}/>
+        <Navbar currentIndex={currentIndex} />
       </div>
       <div className="floating-box"></div>
       <div className="content" ref={containerRef}>

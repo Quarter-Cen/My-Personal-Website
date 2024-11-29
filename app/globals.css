@@ -35,6 +35,12 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow: auto; /* ใช้ scrollbar ปกติ */
+  }
+}
+
 .container {
   min-height: 100vh;
 }
