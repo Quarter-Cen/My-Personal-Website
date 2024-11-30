@@ -15,8 +15,8 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: "Kanok-resume",
-  description: "My Portfolio",
+  title: "Kanok Portfolio & Personal Website",
+  description: "Discover my journey, achievements, and passion for technology.",
   icons: {
     icon: "/favicon.ico", 
   },
