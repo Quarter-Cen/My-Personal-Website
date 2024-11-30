@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { motion } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import Pagination from "./components/Pagination";
@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 import SkillSection from "./components/SkillSection";
+import EducationSection from "./components/EducationSection";
+import ContactSection from "./components/ContactSection";
 
 const Home: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +22,8 @@ const Home: React.FC = () => {
   // ฟังก์ชันตรวจสอบขนาดหน้าจอ
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) { // ขนาดหน้าจอ md ขึ้นไป
+      if (window.innerWidth >= 768) {
+        // ขนาดหน้าจอ md ขึ้นไป
         setIsMdScreen(true);
       } else {
         setIsMdScreen(false);
@@ -55,7 +58,10 @@ const Home: React.FC = () => {
 
       const direction = event.deltaY > 0 ? 1 : -1;
       const sections = container.children;
-      const nextIndex = Math.max(0, Math.min(currentIndex + direction, sections.length - 1));
+      const nextIndex = Math.max(
+        0,
+        Math.min(currentIndex + direction, sections.length - 1)
+      );
 
       setCurrentIndex(nextIndex);
 
@@ -85,7 +91,7 @@ const Home: React.FC = () => {
 
     (sections[index] as HTMLElement)?.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
   };
 
@@ -107,7 +113,7 @@ const Home: React.FC = () => {
           delay: 0.2,
           keyframes: [
             "-25vh", // Halfway move
-            "0vh",   // Final position
+            "0vh", // Final position
           ],
         },
         opacity: {
@@ -136,28 +142,28 @@ const Home: React.FC = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2  }}
+            viewport={{ once: false, amount: 0.2 }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
             className="w-full text-zinc-900"
           >
-            <HomeSection/>
+            <HomeSection />
           </motion.div>
         </section>
         <section className="section">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3  }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
             className="text-zinc-900"
           >
-            <AboutSection/>
+            <AboutSection />
           </motion.div>
         </section>
         <section className="section ">
-        <motion.div
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -166,17 +172,16 @@ const Home: React.FC = () => {
             className="text-zinc-900 my-background flex w-screen h-screen items-center justify-center"
           >
             <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            variants={fadeInUp}
-            transition={{ duration: 1 }}
-            className="text-zinc-900 w-[80vw] h-[70vh]"
-          >
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              variants={fadeInUp}
+              transition={{ duration: 1 }}
+              className="text-zinc-900 w-[80vw] h-[70vh]"
+            >
               <SkillSection />
             </motion.div>
           </motion.div>
-          
         </section>
         <section className="section">
           <motion.div
@@ -185,9 +190,9 @@ const Home: React.FC = () => {
             viewport={{ once: false }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="bg-yellow-500"
+            className="text-zinc-900"
           >
-            EDUCATION
+            <EducationSection />
           </motion.div>
         </section>
         <section className="section">
@@ -197,26 +202,14 @@ const Home: React.FC = () => {
             viewport={{ once: false }}
             variants={fadeInUp}
             transition={{ duration: 1 }}
-            className="bg-purple-500"
+            className="text-zinc-900 w-full h-screen grid grid-cols-4"
           >
-            EXPERIENCE
-          </motion.div>
-        </section>
-        <section className="section">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            variants={fadeInUp}
-            transition={{ duration: 1 }}
-            className="bg-orange-500"
-          >
-            CONTACT
+            <ContactSection />
           </motion.div>
         </section>
       </div>
       <Pagination
-        sections={['HOME', 'ABOUT', 'SKILLS', 'EDUCATION', 'EXPERIENCE', 'CONTACT']}
+        sections={["HOME", "ABOUT", "SKILLS", "EDUCATION", "CONTACT"]}
         currentIndex={currentIndex}
         onClick={handlePaginationClick}
       />

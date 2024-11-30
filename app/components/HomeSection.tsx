@@ -6,7 +6,7 @@ export default function HomeSection() {
                 <div className="flex flex-col ml-16">
                   <div >
                     <p className="text-sm">
-                      WEB DEVELOPER <span className="text-[#074940]">AND</span> MUSICIAN 
+                      WEB DEVELOPER <span className="text-[#72383D]">AND</span> MUSICIAN 
                     </p>
                     <h1 className="tracking-wide leading-none text-7xl text-shadow-sm">
                       KANOK <span className="block mt-0">{/* No margin-top */} SAENGJAN</span>

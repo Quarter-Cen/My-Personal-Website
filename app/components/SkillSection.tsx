@@ -5,7 +5,7 @@ export default function SkillSection() {
         <div className="row-span-1 flex items-end">
           <div>
             <p className="text-base font-extrabold">
-              MY GREAT <span className="text-[#074940] underline underline-offset-4">WORK</span>
+              MY GREAT <span className="text-[#72383D] underline underline-offset-4">WORK</span>
             </p>
           </div>
         </div>
@@ -24,8 +24,8 @@ export default function SkillSection() {
                   alt="Javascript logo"
                 />
               </div>
-              <div className="row-span-1 col-span-1 flex items-center">
-                <p className="text-lg ">JAVASCRIPT</p>
+              <div className="row-span-1 col-span-2 flex items-center">
+                <p className="text-lg ">JAVASCRIPT / TYPESCRIPT</p>
               </div>
               <div className="row-span-1 col-span-2 flex items-start">
                 <progress

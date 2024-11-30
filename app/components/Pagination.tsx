@@ -8,7 +8,7 @@ type PaginationProps = {
   onClick: (index: number) => void;
 };
 
-const section = ['HOME', 'ABOUT', 'SKILLS', 'EDUCATION', 'EXPERIENCE', 'CONTACT']
+
 
 const Pagination: React.FC<PaginationProps> = ({ sections, currentIndex, onClick }) => {
   const [isMobile, setIsMobile] = useState(false);
