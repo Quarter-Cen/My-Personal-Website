@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../components/Navbar"
 
-export default function portfolio(){
+export default function about(){
     return(
     <>  
         <div className="floating-box"></div>
