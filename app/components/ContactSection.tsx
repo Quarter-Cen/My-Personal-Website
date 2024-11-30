@@ -33,7 +33,7 @@ export default function ContactSection() {
                   </div>
                   <input
                     type="text"
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-[95%] max-w-xs"
                   />
                 </label>
               </div>
@@ -46,7 +46,7 @@ export default function ContactSection() {
                   </div>
                   <input
                     type="text"
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-[95%] max-w-xs"
                   />
                 </label>
               </div>
