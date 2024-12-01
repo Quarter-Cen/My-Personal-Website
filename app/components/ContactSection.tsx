@@ -17,7 +17,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex-1 text-zinc-600">
                   <p className="text-xl mb-1 text-hover">
-                    kanoksaengjan@hotamil.com
+                    kanoksaengjan@hotmail.com
                   </p>
                   <p className="text-xl text-hover">66022365@up.ac.th</p>
                 </div>
