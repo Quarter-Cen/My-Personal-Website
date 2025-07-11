@@ -16,12 +16,17 @@ export default function HomeSection() {
                     From Thailand, Sisaket. I have experience in web design, also I am good at Aglie Framework. I love to talk with you about our unique.
                   </p>
                   <div className="flex justify-center space-x-4 mt-3 ">
-                    <a href="#portfolio" className="btn btn-primary shadow-sm text-white">
+                    <a href="portfolio" className="btn btn-primary shadow-sm text-white">
                       View My Work
                     </a>
-                    <a href="#contact" className="btn btn-outline">
+                    <button
+                      className="btn btn-outline"
+                      onClick={() => {
+                        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                      }}
+                    >
                       Contact Me
-                    </a>
+                    </button>
                   </div>
               </div>
             </div>

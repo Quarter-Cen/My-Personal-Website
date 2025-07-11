@@ -4,7 +4,7 @@ export default function AboutSection() {
         <div className="grid grid-rows-3 grid-flow-col gap-4">
             <div className="row-span-3 col-span-2 items-center justify-center ml-24 self-center">
               <div className="h-1/2">
-                <img src="IMG_1480.jpg" alt="" className="max-h-[500px] object-cover" />
+                <img src="pro-pic.jpg" alt="" className="max-h-[500px] object-cover" />
               </div>
                 
             </div>

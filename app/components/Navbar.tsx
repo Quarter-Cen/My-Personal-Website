@@ -78,12 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentIndex }) => {
                         <a href="/portfolio" className={`btn bg-transparent border-none text-base ${getLinkClass('/portfolio')} shadow-none hover:bg-transparent ${getActiveLinkClass('/portfolio')}`}>
                             Portfolio
                         </a>
-                        <a href="/about" className={`btn bg-transparent border-none text-base ${getLinkClass('/about')} shadow-none hover:bg-transparent ${getActiveLinkClass('/about')}`}>
-                            About
-                        </a>
-                        <a href="/contact" className={`btn bg-transparent border-none text-base ${getLinkClass('/contact')} shadow-none hover:bg-transparent ${getActiveLinkClass('/contact')}`}>
-                            Contact
-                        </a>
+
                     </div>
                 </div>
                 <div className="navbar-end border-zinc-800 h-[3.1rem] border-b-[1px] w-1/6 z-50">
