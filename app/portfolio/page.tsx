@@ -93,15 +93,15 @@ export default function portfolio() {
                     className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjIrmLdJUrGYJ9d4OwHlsDh1LDwwrg14IZOa99SJv0-wBcF4oXqSrORVHXGDbv91Vll4DKVj2oAsL6wohmjiygxHy_qIxWuqWUHLEgMhOAV8tlSkOrIWpYY1gncztx2wVnJFTQ1e3N7qkOT_HCethBruTWO1nimggFUxC2ReHSJS4PUVkINQCqKVhg0FE4mh_fNkpS7VQheZ96gteC6qpNRRa2SjmweYIXAtv4jHXWh_h-btXRLBf7RfcDE0hEfyecJjzPHCBcBPf7")',
+                        "url('/DormMate.png')",
                     }}
                   ></div>
                   <div>
                     <p className="text-[#121416] text-base font-medium leading-normal">
-                      Eco-Friendly Packaging Design
+                      DormMate
                     </p>
                     <p className="text-[#6a7681] text-sm font-normal leading-normal">
-                      Packaging design for a sustainable product line.
+                      A digital system for managing student dormitories, improving efficiency in room allocation, maintenance
                     </p>
                   </div>
                 </div>
