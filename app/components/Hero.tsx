@@ -16,14 +16,14 @@ export default function Hero() {
                 building responsive and performant web applications. I love solving problems,
                 learning new technologies, and collaborating with others to deliver the best solutions.
               </p>
-              <div className="flex justify-center space-x-4">
-                {/* <a href="#portfolio" className="btn btn-primary">
+              {/* <div className="flex justify-center space-x-4">
+                <a href="#portfolio" className="btn btn-primary">
                   View My Work
-                </a> */}
+                </a>
                 <a href="#contact" className="btn btn-outline">
                   Contact Me
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="bg-[#f7d662] mt-2 h-1 rounded-full"></div>
