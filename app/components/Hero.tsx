@@ -17,9 +17,9 @@ export default function Hero() {
                 learning new technologies, and collaborating with others to deliver the best solutions.
               </p>
               <div className="flex justify-center space-x-4">
-                <a href="#portfolio" className="btn btn-primary">
+                {/* <a href="#portfolio" className="btn btn-primary">
                   View My Work
-                </a>
+                </a> */}
                 <a href="#contact" className="btn btn-outline">
                   Contact Me
                 </a>
