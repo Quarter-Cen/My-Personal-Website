@@ -38,7 +38,7 @@ const projects = [
 ];
 
 // PortfolioCard Component
-const PortfolioCard = ({ project, onClick }) => {
+const PortfolioCard = ({ project, onClick }: { project: any; onClick: any }) => {
   return (
     <div
       className="flex flex-col gap-3 pb-3 cursor-pointer transform transition-transform duration-200 hover:scale-105 hover:shadow-lg rounded-xl overflow-hidden bg-white"
@@ -63,7 +63,7 @@ const PortfolioCard = ({ project, onClick }) => {
   );
 };
 // ProjectModal Component
-const ProjectModal = ({ project, onClose }) => {
+const ProjectModal = ({ project, onClose }: { project: any; onClose: any }) => {
   if (!project) return null;
 
   // Handle backdrop click to close modal
@@ -78,11 +78,11 @@ const ProjectModal = ({ project, onClose }) => {
       className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] p-4 font-inter"
       onClick={handleBackdropClick}
     >
-      <div className="bg-white rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative">
+      <div className="rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative bg-white">
         {/* Fixed/Sticky close button */}
         <button
           onClick={onClose}
-          className="sticky top-4 float-right z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-900 text-2xl font-bold shadow-lg transition-all duration-200"
+          className="sticky top-4 float-right z-10bg-opacity-90 hover:bg-opacity-100 rounded-full w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-900 text-2xl font-bold shadow-lg transition-all duration-200"
           aria-label="Close modal"
         >
           &times;
@@ -99,7 +99,7 @@ const ProjectModal = ({ project, onClose }) => {
         <div className="mb-4">
           <p className="text-[#121416] text-md font-semibold mb-1">Technologies:</p>
           <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
+            {project.technologies.map((tech: string, index: number) => (
               <span key={index} className="bg-[#f1f2f4] text-[#121416] text-sm px-3 py-1 rounded-full">
                 {tech}
               </span>
@@ -118,7 +118,7 @@ export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (project) => {
+  const openModal = (project: any) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };

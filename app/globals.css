@@ -83,7 +83,7 @@ body {
   align-items: start;
   justify-content: start;
   font-size: 2rem;
-  background-color: #f8f9fa;
+  background-color: transparent;
   border-bottom: 1px solid #ddd;
 }
 

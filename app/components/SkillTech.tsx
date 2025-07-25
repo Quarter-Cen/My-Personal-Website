@@ -240,7 +240,6 @@ export default function SkillTech() {
                         </div>
                     </div>
                 </div>
-            
         </div>
       );
 }
