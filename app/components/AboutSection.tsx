@@ -25,7 +25,7 @@ export default function AboutSection() {
                 Second-year Software Engineering student with hands-on experience in software development and UI/UX design. Passionate about learning and applying new technologies. 
                 </p>
                 <div className="flex space-x-4 mt-6 px-16">
-                  <a href="#portfolio" className="btn btn-primary shadow-sm text-white">
+                  <a href="/cv.pdf" download="cv.pdf" className="btn btn-primary shadow-sm text-white">
                     Download CV
                   </a>
                 </div>
