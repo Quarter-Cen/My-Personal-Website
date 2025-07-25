@@ -91,7 +91,7 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: any }) => {
         <div
           className="w-full h-64 bg-center bg-no-repeat bg-cover rounded-lg mb-6"
           style={{ backgroundImage: `url('${project.imageUrl}')` }}
-          onError={(e) => { e.target.style.backgroundImage = `url('https://placehold.co/800x450/E0E0E0/333333?text=Image+Not+Found')`; }}
+          onError={(e) => { (e.target as HTMLDivElement).style.backgroundImage = `url('https://placehold.co/800x450/E0E0E0/333333?text=Image+Not+Found')`; }}
         ></div>
         <p className="text-[#6a7681] text-base leading-relaxed mb-4">
           {project.fullDescription}
