@@ -49,7 +49,7 @@ const PortfolioCard = ({ project, onClick }: { project: any; onClick: any }) => 
         style={{
           backgroundImage: `url('${project.imageUrl}')`,
         }}
-        onError={(e) => { e.target.style.backgroundImage = `url('https://placehold.co/400x225/E0E0E0/333333?text=Image+Not+Found')`; }}
+        onError={(e) => { (e.target as HTMLDivElement).style.backgroundImage = `url('https://placehold.co/400x225/E0E0E0/333333?text=Image+Not+Found')`; }}
       ></div>
       <div className="p-3">
         <p className="text-[#121416] text-lg font-semibold leading-normal mb-1">
